@@ -15,14 +15,13 @@ var channel = "498890133450391574";
 })
 
 
-client.on('message',function(message) {
-    let prefix = "!";
-let args = message.content.split(" ").slice(1).join(" ");
-if(message.content.startsWith(prefix + "say")) {
-if(!args) return;
-message.channel.send(`${args}`); // محطوط # عشان محد يستخدم البوت لتبنيد / طرد احد من السيرفر
-}
-});
+client.on('message', message => {
+    if(message.content.startsWith('!say')) {
+    if(message.author.id !== "501376527251013661") return;
+    var args = message.content.split(' ').slice(1).join(' ');
+    message.channel.send(args);
+    }
+    });
 
 client.on('ready',async () => {
   let GUILDID = '497502071218503721';
