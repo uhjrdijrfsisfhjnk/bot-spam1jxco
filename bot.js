@@ -44,4 +44,4 @@ client.on('message', message => {
 
 
 
-client.login("TOKEN");
+client.login("NTA5NzkwMDMyMjQ5MzU2MzA5.DsS6yw.vqBP9Jx6NJBBad8u-JYVG1UmJhA");
